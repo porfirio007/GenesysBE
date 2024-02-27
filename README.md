@@ -6,7 +6,7 @@
 
 
 
- <!DOCTYPE html>
+<html>
 <head>
 <title>Lista di Code</title>
 </head>
@@ -38,3 +38,4 @@
 
 </body>
 </html>
+
