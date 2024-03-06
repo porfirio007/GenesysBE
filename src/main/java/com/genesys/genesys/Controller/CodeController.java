@@ -1,23 +1,29 @@
 package com.genesys.genesys.Controller;
 
+import com.genesys.genesys.Entity.SourceCode;
+import com.genesys.genesys.Model.SourceCodeDTO;
+import com.genesys.genesys.Service.SourceCodeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 //comment
 import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*")
 public class CodeController {
 
+    @Autowired
+    private SourceCodeService sourceCodeService;
 
-    @GetMapping("/getCode")
-    public ArrayList<String> getCode(){
-        ArrayList<String> listaCode = new ArrayList<String>();
+    @GetMapping("/getCodeByIdChiamante/{idChiamante}")
+    public List<SourceCode>  getSourceCodesByChiamanteId(@PathVariable Long idChiamante){
 
-        listaCode.add("COMO_TEST");
-        listaCode.add("LODI_TEST");
+        return sourceCodeService.getSourceCodesByChiamanteId(idChiamante);
+        //return new ResponseEntity<>(sourceCodes, HttpStatus.OK);
 
-        return listaCode;
     }
 }
