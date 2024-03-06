@@ -1,9 +1,11 @@
 package com.genesys.genesys.Entity;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.sql.Date;
 
 @Entity
+@Data
 public class SourceCode {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
