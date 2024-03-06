@@ -24,5 +24,4 @@ public class SourceCode {
     @Column(name  = "data_fine_validità")
     private Date dataFineValidita;
 
-    // costruttori, getter e setter
 }
