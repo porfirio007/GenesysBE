@@ -1,15 +1,13 @@
-package com.genesys.genesys.Controller;
+package com.mediacom.extensions.Controller;
 
-import com.genesys.genesys.Entity.SourceCode;
-import com.genesys.genesys.Model.SourceCodeDTO;
-import com.genesys.genesys.Service.SourceCodeService;
+import com.mediacom.extensions.Entity.SourceCode;
+import com.mediacom.extensions.Service.SourceCodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 //comment
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController

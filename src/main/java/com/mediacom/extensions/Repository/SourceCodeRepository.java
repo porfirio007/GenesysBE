@@ -1,6 +1,6 @@
-package com.genesys.genesys.Repository;
+package com.mediacom.extensions.Repository;
 
-import com.genesys.genesys.Entity.SourceCode;
+import com.mediacom.extensions.Entity.SourceCode;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

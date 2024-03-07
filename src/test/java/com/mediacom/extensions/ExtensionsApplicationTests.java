@@ -1,10 +1,10 @@
-package com.genesys.genesys;
+package com.mediacom.extensions;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GenesysApplicationTests {
+class ExtensionsApplicationTests {
 
 	@Test
 	void contextLoads() {

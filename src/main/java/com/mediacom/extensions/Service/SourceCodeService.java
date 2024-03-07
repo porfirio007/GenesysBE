@@ -1,7 +1,7 @@
-package com.genesys.genesys.Service;
+package com.mediacom.extensions.Service;
 
-import com.genesys.genesys.Entity.SourceCode;
-import com.genesys.genesys.Repository.SourceCodeRepository;
+import com.mediacom.extensions.Entity.SourceCode;
+import com.mediacom.extensions.Repository.SourceCodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

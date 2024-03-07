@@ -1,4 +1,4 @@
-package com.genesys.genesys.Entity;
+package com.mediacom.extensions.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

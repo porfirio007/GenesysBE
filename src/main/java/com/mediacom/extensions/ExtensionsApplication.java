@@ -1,13 +1,13 @@
-package com.genesys.genesys;
+package com.mediacom.extensions;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GenesysApplication {
+public class ExtensionsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GenesysApplication.class, args);
+		SpringApplication.run(ExtensionsApplication.class, args);
 	}
 
 }
