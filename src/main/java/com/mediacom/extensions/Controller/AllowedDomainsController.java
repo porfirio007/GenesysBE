@@ -1,6 +1,7 @@
 package com.mediacom.extensions.Controller;
 
 import com.mediacom.extensions.Entity.AllowedDomains;
+import com.mediacom.extensions.Model.DomainDTO;
 import com.mediacom.extensions.Service.AllowedSitesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -18,16 +20,13 @@ public class AllowedDomainsController {
     AllowedSitesService allowedSitesService;
 
     @GetMapping("/getAllowedDomaninsByIdChiamante/{idChiamante}")
-    public List<AllowedDomains> getPippo(@PathVariable Long idChiamante){
-        List<String> listaStringhe = new ArrayList<>();
+    public List<DomainDTO> getAllowedDomainsByChiamanteId(@PathVariable Long idChiamante) {
 
-        listaStringhe.add("peppe");
-        listaStringhe.add("lello");
-        List<AllowedDomains> ad = new ArrayList<AllowedDomains>();
+        List<AllowedDomains> ad = allowedSitesService.getDomainsByChiamanteId(idChiamante);
 
-        ad = allowedSitesService.getSourceCodesByChiamanteId(idChiamante);
-
-        return ad;
+        return ad.stream()
+                .map(allowedDomain -> new DomainDTO(allowedDomain.getDominio()))
+                .collect(Collectors.toList());
     }
 }
 

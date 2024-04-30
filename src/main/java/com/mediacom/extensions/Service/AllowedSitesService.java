@@ -13,7 +13,7 @@ public class AllowedSitesService {
     @Autowired
     AllowedDomainsRepository allowedSitesRepositoy;
 
-    public List<AllowedDomains> getSourceCodesByChiamanteId(Long idChiamante) {
+    public List<AllowedDomains> getDomainsByChiamanteId(Long idChiamante) {
         return allowedSitesRepositoy.findByChiamanteIdAndDataFineValiditaIsNull(idChiamante);
     }
 
