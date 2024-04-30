@@ -7,7 +7,7 @@ import java.sql.Date;
 
 @Entity
 @Data
-public class AllowedSites {
+public class AllowedDomains {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
